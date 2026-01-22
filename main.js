@@ -4,7 +4,7 @@ const loaderEl = document.getElementById("loader");
 
 function generateEmails() {
   emailListEl.innerHTML = "";
-  resultsEl.innerText = "Caricamento...";
+  loaderEl.innerText = "Caricamento...";
 
   for (let i = 0; i < 10; i++) {
     axios
@@ -18,14 +18,14 @@ function generateEmails() {
         emailListEl.append(li);
 
         if (emailListEl.children.length === 10) {
-          resultsEl.innerText = "Finito!";
+          loaderEl.innerText = "Finito!";
         }
         console.log(response.data);
         console.log(response);
       })
       .catch((error) => {
         console.log("ERROR:", error);
-        resultsEl.innerText = "Errore!";
+        loaderEl.innerText = "Errore!";
       });
   }
 }
