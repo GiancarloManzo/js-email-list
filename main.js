@@ -14,7 +14,7 @@ function generateEmails() {
         const li = document.createElement("li");
 
         li.classList.add("list-group-item");
-        li.innerText = `${i + 1}) ${email}`;
+        li.innerText = ` ${email}`;
         emailListEl.append(li);
 
         if (emailListEl.children.length === 10) {
@@ -25,7 +25,6 @@ function generateEmails() {
         console.log(response);
       })
       .catch((error) => {
-        console.log("ERROR:", error);
         loaderEl.innerText = "Errore!";
         loaderEl.classList.add("d-none");
         btnGenerate.classList.remove("d-none");
