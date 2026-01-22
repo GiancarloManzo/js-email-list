@@ -5,10 +5,10 @@ for (let i = 0; i < 10; i++) {
     .then((response) => {
       const email = response.data.response;
       const li = document.createElement("li");
-      li.innerText = email;
+      li.innerText = `${i + 1}) ${email}`;
       console.log(response.data);
       console.log(response);
-      emailListEl.append;
+      emailListEl.append(li);
     })
     .catch((error) => {
       console.log("ERROR:", error);
