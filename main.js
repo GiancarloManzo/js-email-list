@@ -19,6 +19,7 @@ function generateEmails() {
 
         if (emailListEl.children.length === 10) {
           loaderEl.classList.add("d-none");
+          btnGenerate.classList.remove("d-none");
         }
         console.log(response.data);
         console.log(response);
