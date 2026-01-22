@@ -1,5 +1,10 @@
 const btnGenerate = document.getElementById("Generate-Button");
 const emailListEl = document.getElementById("email-list");
+const resultsEl = document.getElementById("results");
+function generateEmails() {
+  emailListEl.innerHTML = "";
+  resultsEl.innerText = "Caricamento...";
+}
 for (let i = 0; i < 10; i++) {
   axios
     .get("https://flynn.boolean.careers/exercises/api/random/mail")
