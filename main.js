@@ -1,3 +1,4 @@
+const btnGenerate = document.getElementById("Generate-Button");
 const emailListEl = document.getElementById("email-list");
 for (let i = 0; i < 10; i++) {
   axios
@@ -5,6 +6,7 @@ for (let i = 0; i < 10; i++) {
     .then((response) => {
       const email = response.data.response;
       const li = document.createElement("li");
+      li.classList.add("list-group-item");
       li.innerText = `${i + 1}) ${email}`;
       console.log(response.data);
       console.log(response);
