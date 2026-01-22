@@ -25,6 +25,7 @@ function generateEmails() {
       })
       .catch((error) => {
         console.log("ERROR:", error);
+        resultsEl.innerText = "Errore!";
       });
   }
 }

@@ -20,13 +20,30 @@
     ></script>
     <script defer src="./main.js"></script>
   </head>
-  <body>
-    <h1>Lista email random</h1>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="mb-3">Lista email random</h3>
 
-    <ul id="email-list" class="list-group"></ul>
-    <button id="Generate-Button" class="btn btn-primary mb-3">
-      Genera email
-    </button>
-    <div id="results"></div>
+          <ul id="email-list" class="list-group"></ul>
+          <button id="Generate-Button" class="btn btn-primary mb-3">
+            Genera 10 email
+          </button>
+          <div
+            id="loader"
+            class="progress mb-3 d-none"
+            role="progressbar"
+            aria-label="Caricamento"
+          >
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              style="width: 100%"
+            ></div>
+          </div>
+          <div id="results"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
