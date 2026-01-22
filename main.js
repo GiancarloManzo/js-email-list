@@ -4,8 +4,8 @@ const loaderEl = document.getElementById("loader");
 
 function generateEmails() {
   emailListEl.innerHTML = "";
-  loaderEl.innerText = "Caricamento...";
-
+  btnGenerate.classList.add("d-none");
+  loaderEl.classList.remove("d-none");
   for (let i = 0; i < 10; i++) {
     axios
       .get("https://flynn.boolean.careers/exercises/api/random/mail")
@@ -18,7 +18,7 @@ function generateEmails() {
         emailListEl.append(li);
 
         if (emailListEl.children.length === 10) {
-          loaderEl.innerText = "Finito!";
+          loaderEl.classList.add("d-none");
         }
         console.log(response.data);
         console.log(response);
@@ -26,6 +26,8 @@ function generateEmails() {
       .catch((error) => {
         console.log("ERROR:", error);
         loaderEl.innerText = "Errore!";
+        loaderEl.classList.add("d-none");
+        btnGenerate.classList.remove("d-none");
       });
   }
 }
