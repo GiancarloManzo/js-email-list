@@ -21,3 +21,5 @@ for (let i = 0; i < 10; i++) {
       console.log("ERROR:", error);
     });
 }
+
+btnGenerate.addEventListener("click", generateEmails);
