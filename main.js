@@ -1,6 +1,6 @@
 const btnGenerate = document.getElementById("Generate-Button");
 const emailListEl = document.getElementById("email-list");
-const resultsEl = document.getElementById("results");
+const loaderEl = document.getElementById("loader");
 
 function generateEmails() {
   emailListEl.innerHTML = "";
